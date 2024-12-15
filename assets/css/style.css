@@ -20,6 +20,7 @@
     --color-blue: #6573f8;
     --color-blue1: #100242;
     --color-blue2: #002ab3;
+    --color-blue3: #010a3d;
     --color-sol: #f39c12;
     --color-lua: #777777;
 }
@@ -358,8 +359,8 @@ a {
 
     100% {
         transform: translateX(-50%);
-    }
-}
+ }   }
+
 
 .headline-scroll span {
     font-family: var(--font-grande);
@@ -530,6 +531,10 @@ a {
     justify-content: center;
 }
 
+.headline-skills.white{
+    color: var(--color-black);
+}
+
 .text-headline-skills h2 {
     font-family: var(--font-grande);
     font-size: 3rem;
@@ -543,6 +548,12 @@ a {
     max-width: 900px;
 }
 
+.text-headline-skills.white {
+    & p{
+        color: var(--color-gray1);
+    }
+}
+
 .conteudo-skills {
     display: grid;
     gap: 1rem;
@@ -550,7 +561,7 @@ a {
 }
 
 .box-skills {
-    border: 1px solid hsla(0, 0%, 100%, 0.15);
+    border: 1px solid hsla(0, 0%, 100%, 0.25);
     border-radius: 20px;
     color: var(--color-white);
     display: flex;
@@ -559,6 +570,22 @@ a {
     height: 450px;
     padding: 2rem;
     gap: 1.5rem;
+}
+
+.box-skills.white {
+    border: 1px solid hsla(0, 0%, 0%, 0.25);
+
+    & i {
+        color: var(--color-black);
+    }
+
+    & h3 {
+        color: var(--color-black);
+    }
+
+    & p {
+        color: var(--color-gray1);
+    }
 }
 
 .box-skills i {
@@ -591,13 +618,17 @@ a {
 
 /*************** SERVIÇOS *****/
 .servicos {
-    background-color: #010622;
+    background-color: #0f038079;
     width: 100vw;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem 1rem;
+}
+
+.servicos.white {
+    background-color: #f6f6f669;
 }
 
 .container-servicos {
@@ -635,6 +666,12 @@ a {
     font-family: var(--font-grande);
 }
 
+.titulo-servicos.white {
+    & h1 {
+        color: var(--color-blue3);
+    }
+}
+
 .descricao-servicos {
     width: 50%;
     font-size: 2rem;
@@ -642,6 +679,10 @@ a {
     line-height: 1.4;
     letter-spacing: 1.5px;
     color: var(--color-white2);
+}
+
+.descricao-servicos.white {
+    color: var(--color-blue3);
 }
 
 .servicos-cards {
@@ -665,6 +706,10 @@ a {
     padding: 2rem;
 }
 
+.card-servicos.white {
+     border: 1px solid hsla(0, 0%, 0%, 0.35);
+}
+
 .card-servicos-left {
     margin-left: 5%;
     border: 1px solid hsla(0, 0%, 100%, 0.35);
@@ -678,12 +723,20 @@ a {
     gap: 7%;
 }
 
+.card-servicos-left.white {
+    border: 1px solid hsla(0, 0%, 0%, 0.35);
+}
+
 .card-titulo {
     width: 68%;
     font-size: clamp(0.8rem, 2.5vw + 0.4rem, 2rem);
     font-family: var(--font-pequena);
     font-weight: normal;
     color: var(--color-white2);
+}
+
+.card-titulo.white {
+    color: var(--color-blue3);
 }
 
 .card-icon {
@@ -702,6 +755,14 @@ a {
     font-size: 2rem;
     color: var(--color-white);
     margin-bottom: -7px;
+}
+
+.card-icon.white {
+    border: 1px solid hsla(0, 0%, 0%, 0.35);
+
+    & i {
+        color: var(--color-blue3);
+    }
 }
 
 #particles-js {

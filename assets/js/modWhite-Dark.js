@@ -10,7 +10,16 @@ const leftSbr = document.querySelector('.left-sobre')
 const TxtGrtr = document.querySelector('.complemento-sobre img')
 const txtSbr = document.querySelector('.textos-sobre')
 const rdsc = document.querySelector('.redes-sociais')
-
+const hedln = document.querySelector('.headline-skills')
+const txthed = document.querySelector('.text-headline-skills')
+const boskills = document.querySelectorAll('.box-skills')
+const services = document.querySelector('.servicos')
+const titServ = document.querySelector('.titulo-servicos')
+const descServ = document.querySelector('.descricao-servicos')
+const cardServ = document.querySelectorAll('.card-servicos')
+const cardServLeft = document.querySelectorAll('.card-servicos-left')
+const cardTitle = document.querySelectorAll('.card-titulo')
+const iconServ = document.querySelectorAll('.card-icon')
 
 let particlesConfig = {
     "particles": {
@@ -137,11 +146,37 @@ chk.addEventListener('change', () => {
     leftSbr.classList.toggle('white')
     txtSbr.classList.toggle('white')
     rdsc.classList.toggle('white')
+    hedln.classList.toggle('white')
+    txthed.classList.toggle('white')
+    services.classList.toggle('white')
+    titServ.classList.toggle('white')
+    descServ.classList.toggle('white')
+    
 
     menuLinks.forEach(link => {
         link.classList.toggle('white');
     });
-    
+
+    boskills.forEach(border => {
+      border.classList.toggle('white');
+  });
+
+  cardServ.forEach(border => {
+    border.classList.toggle('white')
+  })
+
+  cardServLeft.forEach(border => {
+    border.classList.toggle('white')
+  })
+
+  cardTitle.forEach(text => {
+    text.classList.toggle('white')
+  })
+
+  iconServ.forEach(border => {
+    border.classList.toggle('white')
+  })
+
     if (document.body.classList.contains('white')) {
         logo.src = 'assets/img/Logo_GS_preta-removebg-preview.png';
         particlesConfig.particles.color.value = "#000"  
@@ -154,3 +189,5 @@ chk.addEventListener('change', () => {
 
     updateParticlesConfig();
 });
+
+console.log(boldSbr)

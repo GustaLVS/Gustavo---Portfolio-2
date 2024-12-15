@@ -206,19 +206,46 @@
 
 /*Resposividade header*/
 
-@media (max-width: 650px) {
-    .logo{
-        display: none;
-    }
-    .menu-icons {
-        display: flex;
-        gap: 70px;
-        align-items: center;
-        justify-content: flex-end;
+@media (max-width: 950px) {
+    .header {
+        padding: 1px 1rem;
     }
 
-    & span {
-        display: none;
+    .logo img {
+        width: 100px; /* Reduz ainda mais */
     }
-        
+
+    .menu-icons {
+        gap: 10px;
+    }
+
+    .menu-icons a {
+        font-size: 1rem; /* Texto menor */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column; /* Alinha em coluna */
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .logo img {
+        margin-bottom: 10px;
+    }
+
+    .menu-icons {
+        justify-content: center;
+        flex-wrap: wrap; /* Quebra em linhas */
+        gap: 15px;
+    }
+
+    .menu-icons a {
+        font-size: 1rem;
+    }
+
+    .label {
+        transform: scale(1.2); /* Reduz o tamanho */
+    }
 }
